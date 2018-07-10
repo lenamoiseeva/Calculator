@@ -17,38 +17,44 @@ public class Calculator {
             switch (choice) {
                 case 1:
                     text.getText1();
-                    addition.setFn(scanner.nextDouble());
+                    addition.setFn(scanner.nextInt());
                     text.getText2();
-                    addition.setSn(scanner.nextDouble());
+                    addition.setSn(scanner.nextInt());
                     addition.getResultOfAddition();
                     scanner.close();
                     break;
                 case 2:
                     text.getText1();
-                    subtraction.setFn(scanner.nextDouble());
+                    subtraction.setFn(scanner.nextInt());
                     text.getText2();
-                    subtraction.setSn(scanner.nextDouble());
+                    subtraction.setSn(scanner.nextInt());
                     subtraction.getResultOfSubtraction();
                     scanner.close();
                     break;
                 case 3:
                     text.getText1();
-                    multiplication.setFn(scanner.nextDouble());
+                    multiplication.setFn(scanner.nextInt());
                     text.getText2();
-                    multiplication.setSn(scanner.nextDouble());
+                    multiplication.setSn(scanner.nextInt());
                     multiplication.getResultOfMultiplication();
                     scanner.close();
                     break;
                 case 4:
                     text.getText1();
-                    division.setFn(scanner.nextDouble());
+                    division.setFn(scanner.nextInt());
                     text.getText2();
-                    division.setSn(scanner.nextDouble());
-                    division.getResultOfDivision();
+                    division.setSn(scanner.nextInt());
+                    try {
+                        division.getResultOfDivision();
+                    } catch (ArithmeticException e) {
+                        System.out.println("Division by zero is prohibited");
+                        division.getResultOfDivision();
+                    }
                     scanner.close();
                     break;
+
                 default:
-                    System.out.println("Out of range");
+                    System.out.println("Invalid value");
             }
         }
 
