@@ -1,21 +1,21 @@
 package CalculatorFields;
 
 public abstract class CalculatorFields {
-    private double fn;
-    private double sn;
+    private int fn;
+    private int sn;
 
     public CalculatorFields(){}
 
-    public double getFn() {
+    public int getFn() {
         return fn;
     }
-    public void setFn(double fn) {
+    public void setFn(int fn) {
         this.fn = fn;
     }
-    public double getSn() {
+    public int getSn() {
         return sn;
     }
-    public void setSn(double sn) {
+    public void setSn(int sn) {
         this.sn = sn;
     }
 }
