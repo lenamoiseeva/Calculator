@@ -46,7 +46,7 @@ public class Calculator {
                     division.setSn(scanner.nextInt());
                     try {
                         division.getResultOfDivision();
-                    } catch (ArithmeticException e) {
+                    } catch (Exception e) {
                         System.out.println("Division by zero is prohibited");
                         division.getResultOfDivision();
                     }
